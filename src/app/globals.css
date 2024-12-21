@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: var(--font-outfit), sans-serif;
+  }
+
+
+  /*  */
+  @keyframes running-border {
+    0% {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: #28a745; /* Green */
+    }
+    25% {
+      border-top-color: #28a745; /* Green */
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+    50% {
+      border-top-color: #28a745; /* Green */
+      border-right-color: #28a745; /* Green */
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+    75% {
+      border-top-color: #28a745; /* Green */
+      border-right-color: #28a745; /* Green */
+      border-bottom-color: #28a745; /* Green */
+      border-left-color: transparent;
+    }
+    100% {
+      border-top-color: #28a745; /* Green */
+      border-right-color: #28a745; /* Green */
+      border-bottom-color: #28a745; /* Green */
+      border-left-color: #28a745; /* Green */
+    }
+  }
+  
+  @layer utilities {
+    .animate-running-border {
+      animation: running-border 1s linear infinite; /* Faster animation speed */
+      border-width: 2px;
+      border-style: solid;
+    }
+  }
+  
